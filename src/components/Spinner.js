@@ -50,7 +50,7 @@ const [spinnerOn, setSpinnerOn] = useState(true);
     <div className='widget-spinner container'>
       <h2>Spinner</h2>
       {
-        setSpinnerOn && <div id='spinner' className='spinner'>--+--</div>
+        spinnerOn && <div id='spinner' className='spinner'>--+--</div>
       }
       <button id='toggleSpinner' onClick={toggleSpinner}>
       {spinnerOn ? 'hide spinner' : 'show spinner'}
