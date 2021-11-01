@@ -37,7 +37,7 @@ export default function Programmers() {
   const style = {
     fontSize: '1.5em',
     marginTop: '0.5em',
-    color: featuredProgrammer ? 'gold' : 'royalblue', // 🤔 color turns to gold, when celebrating
+    color: featuredProgrammer ? 'gold' : 'royalblue'
   };
 
   return (

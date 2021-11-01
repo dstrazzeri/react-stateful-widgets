@@ -40,13 +40,10 @@ export default function Input() {
   const [inputValue, setInputValue] = useState("")
 
   const changeInput = evt => {
-    // When the input changes, its whole value can be found inside the event object.
-    // Log out the synthetic event object 'evt' and see for yourself.
     const { value } = evt.target;
-    console.log(evt);
+    console.log(value.evt);
 
     setInputValue(evt.target.value)
-    /* STEP 4 */
   };
   const reset = () => {
     setInputValue("");
@@ -55,15 +52,15 @@ export default function Input() {
   const style = {
     fontSize: '1.5em',
     marginBottom: '0.3em',
-    color: (inputValue.length < 10) ? 'royalblue' : 'crimson' /* STEP 2 */
+    color: (inputValue.length < 10) ? 'royalblue' : 'crimson' 
   };
 
   return (
     <div className='widget-input container'>
       <h2>Input</h2>
-      <div id='output' style={style}>{inputValue.toUpperCase()}</div> {/* STEP 3 */}
+      <div id='output' style={style}>{inputValue.toUpperCase()}</div>
       <div>
-        <input id='input' type='text' onChange={changeInput} value={inputValue}/> {/* STEP 6 */}
+        <input id='input' type='text' onChange={changeInput} value={inputValue}/>
         <button id='resetInput' onClick={reset}>Reset</button>
       </div>
     </div>
